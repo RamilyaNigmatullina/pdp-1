@@ -2,7 +2,6 @@ require "rails_helper"
 
 feature "Update  Article" do
   let(:user) { create :user }
-  let(:article) { create :article, user: user }
   let(:article_attributes) { attributes_for(:article) }
 
   background do
@@ -10,7 +9,7 @@ feature "Update  Article" do
   end
 
   scenario "User updates article" do
-    visit edit_users_article_path(article)
+    visit edit_users_article_path(create(:article, user: user))
 
     fill_form(:article, article_attributes)
     click_button "Update Article"
