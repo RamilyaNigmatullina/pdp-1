@@ -1,0 +1,14 @@
+.row
+  .medium-8.columns
+    h3
+      = article.title
+    p
+      = article.text
+    em
+      = article.author_full_name
+    br
+    time
+      = article.time_created_in_words
+
+
+    = link_to("Edit", [:edit, :users, article]) if policy(article).manage?
