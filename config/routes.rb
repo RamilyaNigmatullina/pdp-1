@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :articles, only: %i(index show)
 
   namespace :users do
-    resources :articles, only: %i(new create edit update)
+    resources :articles, only: %i(new create edit update destroy)
   end
 
   root to: "articles#index"
