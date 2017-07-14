@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :article do
-    title
-    text { Faker::Lorem.paragraph }
+    title { Faker::Lorem.sentence }
+    text { Faker::Lorem.paragraph(10) }
     user
   end
 end
