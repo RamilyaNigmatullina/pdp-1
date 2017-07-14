@@ -1,5 +1,5 @@
 class ArticleDecorator < ApplicationDecorator
-  delegate :title, :text
+  delegate :id, :title, :text
 
   def author_full_name
     user.full_name_with_email

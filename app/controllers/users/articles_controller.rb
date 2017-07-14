@@ -17,7 +17,7 @@ module Users
     end
 
     def update
-      article.save
+      article.update(article_params)
       respond_with(article)
     end
 

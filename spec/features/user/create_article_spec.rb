@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "Create Article" do
   let(:user) { create :user }
-  let(:article_attributes) { attributes_for(:article) }
+  let(:article_attributes) { { title: "Title", text: "Text" } }
 
   background do
     login_as user
@@ -14,5 +14,7 @@ feature "Create Article" do
     click_button "Create Article"
 
     expect(page).to have_content("Article was successfully created.")
+    expect(page).to have_content("Title")
+    expect(page).to have_content("Text")
   end
 end
