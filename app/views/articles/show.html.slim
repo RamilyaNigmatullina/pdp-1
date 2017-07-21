@@ -1,0 +1,15 @@
+.row
+  .medium-8.columns
+    h3
+      = article.title
+    p
+      = article.text
+    em
+      = article.author_full_name
+    br
+    time
+      = article.time_created_in_words
+
+    - if policy(article).manage?
+      = link_to("Edit", edit_users_article_path)
+      = link_to("Destroy", users_article_path, method: :delete, data: { confirm: "Are you sure?" })
