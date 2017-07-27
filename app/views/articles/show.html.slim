@@ -13,3 +13,5 @@
     - if policy(article).manage?
       = link_to("Edit", edit_users_article_path)
       = link_to("Destroy", users_article_path, method: :delete, data: { confirm: "Are you sure?" })
+
+    = render("comments/discussion", comments: comments, comment: comment)
