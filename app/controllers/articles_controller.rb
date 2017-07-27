@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  expose_decorated :articles, -> { Article.includes(:user) }
+  expose_decorated :articles, -> { paginated_articles }
   expose_decorated :article
 
   expose_decorated(:comments) { article.comments }
@@ -9,5 +9,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
+  end
+
+  private
+
+  def paginated_articles
+    Article.includes(:user).order(created_at: :desc).page(params[:page]).per(10)
   end
 end
