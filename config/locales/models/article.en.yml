@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+    attributes:
+      article:
+        id: id
+        name: Name
+        email: Email
+        phone: Phone
+        message: Message

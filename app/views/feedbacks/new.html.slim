@@ -15,7 +15,9 @@
         | You may find the answer in the #{link_to("FAQ", "#")}.
 
       .form-inputs
-        = f.input :name
+        = f.label :name
+        = f.text_field :name
+        / = f.input :name
         = f.input :email
         = f.input :phone
         = f.input :message, as: :text

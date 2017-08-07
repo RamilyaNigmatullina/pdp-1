@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      feedback:
+        one: Feedback
+        other: Feedbacks
+    attributes:
+      feedback:
+        id: id
+        name: Name
+        email: Email
+        phone: Phone
+        message: Message
