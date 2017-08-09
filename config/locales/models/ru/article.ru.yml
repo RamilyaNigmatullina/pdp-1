@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      article:
+        one: Статья
+        other: Статьи
+    attributes:
+      article:
+        id: id
+        name: Имя
+        email: Email
+        phone: Phone
+        message: Message
