@@ -1,0 +1,13 @@
+ru:
+  articles:
+    index:
+      title: "Статьи"
+  users:
+    articles:
+      new:
+        title: "Создать статью"
+      edit:
+        title: "Редактировать статью"
+
+
+# articles/index.html.slim

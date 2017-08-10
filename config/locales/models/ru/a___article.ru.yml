@@ -6,8 +6,6 @@ ru:
         other: Статьи
     attributes:
       article:
-        id: id
-        name: Имя
-        email: Email
-        phone: Phone
-        message: Message
+        id: Id
+        title: Заголовок
+        text: Текст
