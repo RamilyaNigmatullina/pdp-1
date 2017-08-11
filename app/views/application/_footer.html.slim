@@ -2,8 +2,9 @@
   .columns
     footer.footer
       .footer__item &copy; Flatstack #{Time.zone.today.year}
-      .footer__item PDP-1
       .footer__item
-        = link_to "About us", pages_about_path
+        = t(".title")
       .footer__item
-        = link_to "Contact us", new_feedback_path
+        = link_to t(".about_us"), pages_about_path
+      .footer__item
+        = link_to t(".contact_us"), new_feedback_path

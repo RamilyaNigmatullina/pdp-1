@@ -11,7 +11,7 @@
       = article.time_created_in_words
 
     - if policy(article).manage?
-      = link_to("Edit", edit_users_article_path)
-      = link_to("Destroy", users_article_path, method: :delete, data: { confirm: "Are you sure?" })
+      = link_to(t(".edit"), edit_users_article_path)
+      = link_to(t(".destroy"), users_article_path, method: :delete, data: { confirm: t(".confirm") })
 
     = render("comments/discussion", comments: comments, comment: comment)

@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title("Edit #{current_user.full_name}")
+    h2 = title(t(".title"))
 
 .row
   .medium-5.columns
@@ -19,15 +19,16 @@
             required: false
 
       .form-actions
-        = f.button :submit, "Update"
+        = f.button :submit, t(".update")
 
   .medium-5.medium-offset-1.columns.end
     h6
-      b Cancel my account
+      b
+        = t(".cancel_account")
     p
-      | Unhappy?
+      = t(".unhappy")
       '
-      = link_to "Cancel my account.",
+      = link_to t(".cancel_my_account"),
           registration_path(resource_name),
           data: { confirm: "Are you sure?" },
           method: :delete

@@ -12,8 +12,7 @@
     = simple_form_for(feedback, url: feedback_path) do |f|
 
       legend
-        ' Have a question?
-        | You may find the answer in the #{link_to("FAQ", "#")}.
+        = t(".any_questions")
 
       .form-inputs
         = f.label :name

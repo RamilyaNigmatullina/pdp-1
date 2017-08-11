@@ -1,13 +1,14 @@
 ru:
-  articles:
-    index:
-      title: "Статьи"
   users:
     articles:
       new:
         title: "Создать статью"
       edit:
         title: "Редактировать статью"
-
-
-# articles/index.html.slim
+  articles:
+    index:
+      title: "Статьи"
+    show:
+      edit: "Редактировать"
+      destroy: "Удалить"
+      confirm: "Вы уверены, что хотите удалить статью?"
