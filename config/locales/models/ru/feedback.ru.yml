@@ -1,5 +1,5 @@
 ru:
-  activerecord:
+  activemodel:
     models:
       feedback: Отзыв
     attributes:
@@ -9,4 +9,3 @@ ru:
         email: Email
         phone: Номер для связи
         message: Сообщение
-

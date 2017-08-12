@@ -1,5 +1,5 @@
 en:
-  activerecord:
+  activemodel:
     models:
       feedback: Feedback
     attributes:
@@ -9,4 +9,3 @@ en:
         email: Email
         phone: Phone
         message: Message
-
