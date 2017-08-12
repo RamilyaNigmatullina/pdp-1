@@ -7,6 +7,12 @@ module Users
     def create
       self.comment = new_comment if comment.save
       render "articles/fragments"
+      # respond_to do |format|
+      #   format.js { render
+      #     template: "comments/discussion",
+      #     layout: false
+      #   }
+      # end
     end
 
     private

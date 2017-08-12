@@ -1,5 +1,9 @@
-.row
-  = comment.text
+.comment-item data-id='#{comment.id}'
+  .comment-item__text
+    = comment.text
+  .comment-item__edit-link
+    = link_to "Edit", edit_users_article_comment_path(article)
 
-.row
   = comment.time_created_in_words
+
+  hr
