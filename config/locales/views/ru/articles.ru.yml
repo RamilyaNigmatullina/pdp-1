@@ -3,8 +3,10 @@ ru:
     articles:
       new:
         title: "Создать статью"
+        create: "Создать"
       edit:
         title: "Редактировать статью"
+        update: "Обновить"
   articles:
     index:
       title: "Статьи"

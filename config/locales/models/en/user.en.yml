@@ -1,8 +1,7 @@
 en:
   activerecord:
     models:
-      user:
+      user: User
     attributes:
       user:
-        full_name:
-
+        full_name: Full name

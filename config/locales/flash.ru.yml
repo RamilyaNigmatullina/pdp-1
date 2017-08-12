@@ -19,7 +19,10 @@ ru:
       destroy:
         notice: '%{resource_name} был успешно удален.'
         alert: '%{resource_name} не может быть удален.'
-
     feedbacks:
       create:
         notice: "Отзыв был успешно отправлен."
+    users:
+      articles:
+        create:
+          notice: "Статья была успешно создана."

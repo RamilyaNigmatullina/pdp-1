@@ -12,7 +12,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :locale, only: %(update)
-
   root to: "articles#index"
 end

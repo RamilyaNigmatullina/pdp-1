@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title(t(".title"))
+    h2 = title(t(".title", full_name: current_user.full_name))
 
 .row
   .medium-5.columns

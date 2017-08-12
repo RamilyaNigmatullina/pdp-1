@@ -2,10 +2,10 @@ ru:
   activerecord:
     errors:
       messages:
-        record_invalid: 'Возникли ошибки: %{errors}'
+        record_invalid: "Возникли ошибки: %{errors}"
         restrict_dependent_destroy:
-          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+          has_one: "Невозможно удалить запись, так как существует зависимость: %{record}"
+          has_many: "Невозможно удалить запись, так как существуют зависимости: %{record}"
   date:
     abbr_day_names:
     - Вс
@@ -146,7 +146,7 @@ ru:
       invalid: имеет неверное значение
       less_than: может иметь значение меньшее чем %{count}
       less_than_or_equal_to: может иметь значение меньшее или равное %{count}
-      model_invalid: 'Возникли ошибки: %{errors}'
+      model_invalid: "Возникли ошибки: %{errors}"
       not_a_number: не является числом
       not_an_integer: не является целым числом
       odd: может иметь лишь четное значение
@@ -169,7 +169,7 @@ ru:
         other: неверной длины (может быть длиной ровно %{count} символа)
       other_than: должно отличаться от %{count}
     template:
-      body: 'Проблемы возникли со следующими полями:'
+      body: "Проблемы возникли со следующими полями:"
       header:
         few: "%{model}: сохранение не удалось из-за %{count} ошибок"
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
@@ -177,7 +177,7 @@ ru:
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
   helpers:
     select:
-      prompt: 'Выберите: '
+      prompt: "Выберите: "
     submit:
       create: Создать %{model}
       submit: Сохранить %{model}

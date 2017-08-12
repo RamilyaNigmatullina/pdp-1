@@ -6,8 +6,6 @@ en:
         other: Articles
     attributes:
       article:
-        id: id
-        name: Name
-        email: Email
-        phone: Phone
-        message: Message
+        id: Id
+        title: Title
+        text: Text
