@@ -3,4 +3,7 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable
 
   validates :full_name, presence: true
+
+  has_many :articles
+  has_many :comments
 end

@@ -5,14 +5,9 @@ module Users
     expose(:comment, parent: :article)
 
     def create
+      comment.user = current_user
       self.comment = new_comment if comment.save
       render "articles/fragments"
-      # respond_to do |format|
-      #   format.js { render
-      #     template: "comments/discussion",
-      #     layout: false
-      #   }
-      # end
     end
 
     private
