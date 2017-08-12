@@ -2,7 +2,6 @@
   &__title {
     display: block;
     float: left;
-    line-height: 0.5;
   }
 
   &__author {
@@ -13,19 +12,19 @@
 
   &__manage-links {
     display: block;
-    text-align: right;
     font-style: italic;
+    text-align: right;
   }
 
   &__created_at {
-    font-style: italic;
     color: $dark-gray;
+    font-style: italic;
     text-align: right;
   }
 }
 
 .clearfix {
-  content: "";
   display: table;
   clear: both;
+  content: "";
 }
