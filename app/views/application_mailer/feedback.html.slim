@@ -1,5 +1,5 @@
 p
-  | Hello, here is feedback from #{@feedback.name} (#{@feedback.email} #{@feedback.phone})
+  = t(".text", name: @feedback.name, email: @feedback.email, phone: @feedback.phone)
 
 blockquote
   = @feedback.message
