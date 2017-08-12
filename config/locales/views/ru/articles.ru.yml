@@ -11,6 +11,7 @@ ru:
     index:
       title: "Статьи"
     show:
+      title: "Статья %{article}"
       edit: "Редактировать"
       destroy: "Удалить"
       confirm: "Вы уверены, что хотите удалить статью?"

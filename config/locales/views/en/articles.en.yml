@@ -9,8 +9,9 @@ en:
         update: "Update"
   articles:
     index:
-      title: "Title"
+      title: "Articles"
     show:
+      title: "Article %{article}"
       edit: "Edit"
       destroy: "Destroy"
       confirm: "Are you sure?"
