@@ -1,0 +1,31 @@
+.article {
+  &__title {
+    display: block;
+    float: left;
+    line-height: 0.5;
+  }
+
+  &__author {
+    display: block;
+    float: left;
+    font-style: italic;
+  }
+
+  &__manage-links {
+    display: block;
+    text-align: right;
+    font-style: italic;
+  }
+
+  &__created_at {
+    font-style: italic;
+    color: $dark-gray;
+    text-align: right;
+  }
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
