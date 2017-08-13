@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :articles, only: %i(new create edit update destroy) do
-      resources :comments, only: %i(create edit update destroy)
+      resources :comments, only: %i(create update destroy)
     end
   end
 

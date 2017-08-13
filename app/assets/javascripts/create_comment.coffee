@@ -1,13 +1,13 @@
 class App.CreateComment extends App.Component
   refs:
     commentField: "#comment_text"
+    submitButton: "input[type='submit']"
 
   bindings: ->
     @$el.on "submit", @submitHandle
 
   submitHandle: (event) =>
     event.preventDefault()
-    @$el.prop("disabled", false)
 
     url = @$el.attr("action")
 
@@ -18,6 +18,7 @@ class App.CreateComment extends App.Component
       dataType: "json"
       type: "POST"
       success: @successHandler
+      @_allowSubmit()
       @_clearField()
     )
 
@@ -28,8 +29,12 @@ class App.CreateComment extends App.Component
       }
     }
 
+  successHandler: =>
+    @_allowSubmit()
+    @_clearField()
+
   _clearField: =>
     @$refs.commentField.val("")
 
-  successHandler: =>
-    @$refs.commentField.val("")
+  _allowSubmit: =>
+    @$refs.submitButton.removeAttr("disabled")

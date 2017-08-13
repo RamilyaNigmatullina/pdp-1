@@ -16,3 +16,4 @@
 $(document).foundation()
 
 new App.CreateComment(".js-comment-form")
+new App.ManageComment(".js-manage-comment")

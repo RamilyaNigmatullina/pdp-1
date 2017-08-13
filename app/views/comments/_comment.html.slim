@@ -1,7 +1,14 @@
-.comment
-  .comment__author
-    = comment.author_full_name
-  .comment__created_at
-    = comment.time_created_in_words
-  = comment.text
-  hr
+.js-manage-comment
+  .comment
+    .comment__author
+      = comment.author_full_name
+    .comment__created_at
+      = comment.time_created_in_words
+    .comment__text
+      = comment.text
+    - if policy(comment).manage?
+      = link_to "Edit", users_article_comment_path(article, comment),
+        class: "comment__edit"
+      = link_to "Destroy", users_article_comment_path(article, comment),
+        class: "comment__destroy"
+    hr

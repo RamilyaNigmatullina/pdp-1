@@ -10,6 +10,14 @@ module Users
       render "articles/fragments"
     end
 
+    def update
+    end
+
+    def destroy
+      self.comment = new_comment if comment.destroy
+      render "articles/fragments"
+    end
+
     private
 
     def comment_params
