@@ -3,4 +3,6 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable
 
   validates :full_name, presence: true
+
+  ratyrate_rater
 end

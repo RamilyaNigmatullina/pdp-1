@@ -6,6 +6,8 @@
 #
 #= require jquery2
 #= require jquery-ujs
+#= require jquery.raty
+#= require ratyrate
 #= require foundation
 #= require current_user
 #= require fragments

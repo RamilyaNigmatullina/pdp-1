@@ -10,8 +10,6 @@
     time
       = article.time_created_in_words
 
-    - if policy(article).manage?
-      = link_to("Edit", edit_users_article_path)
-      = link_to("Destroy", users_article_path, method: :delete, data: { confirm: "Are you sure?" })
+    = rating_for article.to_model, "quality", disable_after_rate: true
 
     = render("comments/discussion", comments: comments, comment: comment)
