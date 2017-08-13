@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  post '/rate' => 'rater#create', :as => 'rate'
   get "pages/about"
 
   devise_for :users, controllers: { registrations: "users/registrations" }
@@ -11,6 +10,8 @@ Rails.application.routes.draw do
       resources :comments, only: %i(create)
     end
   end
+
+  post "/rate" => "rater#create", as: "rate"
 
   root to: "articles#index"
 end
