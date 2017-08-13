@@ -1,0 +1,23 @@
+.comment {
+  &__author {
+    display: block;
+    float: left;
+    font-weight: bold;
+  }
+
+  &__created_at {
+    color: $dark-gray;
+    font-style: italic;
+    text-align: right;
+  }
+
+  &__edit {
+    display: block;
+    margin-right: 10px;
+    float: left;
+  }
+
+  &__distroy {
+    display: block;
+  }
+}

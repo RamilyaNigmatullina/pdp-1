@@ -24,6 +24,7 @@ end
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
+gem "jade-rails", "~> 1.11.0.1"
 gem "metamagic"
 gem "simple_form"
 gem "slim"

@@ -9,7 +9,11 @@
 #= require foundation
 #= require current_user
 #= require fragments
+#= require jade/runtime
 #= require_tree ../templates
 #= require_tree .
 
 $(document).foundation()
+
+new App.CreateComment(".js-comment-form")
+new App.ManageComment(".js-manage-comment")

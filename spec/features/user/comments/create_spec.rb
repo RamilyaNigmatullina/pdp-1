@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "Create Article" do
+feature "Create Article", :js do
   let(:user) { create :user }
   let(:article) { create :article }
   let(:comment_attributes) { { text: "Comment text" } }

@@ -3,8 +3,8 @@
     = link_to(article.title, article)
   p
     = article.short_text
-  em
+  .article__author
     = article.author_full_name
-  time
+  .article__created_at
     = article.time_created_in_words
   hr
