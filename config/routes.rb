@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  post "/rate" => "rater#create", as: "rate"
+
   root to: "articles#index"
 end
