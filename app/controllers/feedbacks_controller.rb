@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    ApplicationMailer.feedback(feedback).deliver_now! if feedback.save
+    ApplicationMailer.feedback(feedback.serializable_hash).deliver_later! if feedback.save
     respond_with(feedback, location: root_path)
   end
 

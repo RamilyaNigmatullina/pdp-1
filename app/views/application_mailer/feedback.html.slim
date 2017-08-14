@@ -1,5 +1,5 @@
 p
-  | Hello, here is feedback from #{@feedback.name} (#{@feedback.email} #{@feedback.phone})
+  | Hello, here is feedback from #{@feedback[:name]} (#{@feedback[:email]} #{@feedback[:phone]})
 
 blockquote
-  = @feedback.message
+  = @feedback[:message]
