@@ -13,3 +13,5 @@
 #= require_tree .
 
 $(document).foundation()
+
+new App.StarRating("input[name='rating[score]']")

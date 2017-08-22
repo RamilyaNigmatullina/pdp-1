@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
   expose_decorated(:comments) { article.comments }
   expose(:comment) { Comment.new(article: article) }
+  expose(:rating) { Rating.new }
 
   def index
   end

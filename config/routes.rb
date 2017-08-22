@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :articles, only: %i(new create edit update destroy) do
       resources :comments, only: %i(create)
     end
+    resources :ratings
   end
 
   root to: "articles#index"

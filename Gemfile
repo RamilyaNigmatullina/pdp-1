@@ -8,6 +8,7 @@ gem "rails", "5.0.2"
 # assets
 gem "autoprefixer-rails"
 gem "coffee-rails"
+gem "font-awesome-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "fragments.js", git: "git@github.com:fs/fragments.js.git"

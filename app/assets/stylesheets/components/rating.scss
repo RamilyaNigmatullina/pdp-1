@@ -1,0 +1,32 @@
+.stars {
+  // width: 670px;
+  // display: inline-block;
+}
+
+input[name="rating[score]"] { display: none; }
+
+label.collection_radio_buttons {  font-size: 18px;
+}
+
+span input[name="rating[score]"]:checked ~ label.collection_radio_buttons:before {
+  content: "\f005";
+  color: #FE7;
+}
+
+input#rating_score_5:checked ~ label.collection_radio_buttons:before {
+}
+
+label.collection_radio_buttons:hover {
+  content: "\f005";
+  color: #FE7;
+}
+
+label.collection_radio_buttons:hover:before {
+  content: "\f005";
+  color: #FE7;
+}
+
+label.collection_radio_buttons:before {
+  content: "\f006";
+  font-family: FontAwesome;
+}
