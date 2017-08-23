@@ -3,19 +3,10 @@ module Users
     expose(:article)
     expose(:rating) { article.ratings.find_or_initialize_by(user: current_user) }
 
-    def new
-    end
-
     def create
       rating.update(rating_params)
-      article.update_column(:average_rating, article.ratings.avearge(:score))
-      respond_with article
-    end
-
-    def edit
-    end
-
-    def update
+      article.update_column(:average_rating, article.ratings.average(:score).round(1))
+      # respond_with article
     end
 
     private

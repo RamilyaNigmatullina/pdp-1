@@ -1,6 +1,6 @@
 class ArticleRating extends Components.Base
   refs:
-    startRatingItem: ".js-start-rating-item"
+    starRatingItem: ".js-star-rating-item"
 
   config:
     ratingUrl: "/users/articles/:article_id/ratings"
@@ -10,7 +10,7 @@ class ArticleRating extends Components.Base
     @articleId = @$el.data("id")
 
   bindings: ->
-    @$refs.startRatingItem.click @_updateArticleRating
+    @$refs.starRatingItem.click @_updateArticleRating
 
   _updateArticleRating: (event) =>
     console.log event
@@ -25,15 +25,15 @@ class ArticleRating extends Components.Base
           score: rating
       success: (response) =>
         console.log(response)
-        @_updateAverageRating()
-        @_updateStars()
+        @_updateAverageRating(rating)
+        @_updateStars(rating)
 
   _updateAverageRating: (rating)=>
     console.log("_updateAverageRating", rating)
 
-  _updateStars: =>
-    @$refs.startRatingItem.removeClass("rating-active")
-    @$refs.startRatingItem.slice(0, rating).addClass("rating-active")
+  _updateStars: (rating) =>
+    @$refs.starRatingItem.removeClass("rating-active")
+    @$refs.starRatingItem.slice(0, rating).addClass("rating-active")
 
 
 $ ->
