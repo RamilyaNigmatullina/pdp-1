@@ -1,15 +1,15 @@
 module Users
   class RatingsController < Users::BaseController
     expose(:article)
-    expose(:rating)
+    expose(:rating) { article.ratings.find_or_initialize_by(user: current_user) }
 
     def new
     end
 
     def create
-      rating.user = current_user
-      rating.article = article
-      rating.save
+      rating.update(rating_params)
+      article.update_column(:average_rating, article.ratings.avearge(:score))
+      respond_with article
     end
 
     def edit

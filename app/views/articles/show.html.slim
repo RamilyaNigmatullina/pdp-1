@@ -1,4 +1,4 @@
-.row
+.row.js-article-rating data-id=article.id
   .medium-8.columns.article
     h3
       = article.title
@@ -14,5 +14,5 @@
     .article__created_at.clearfix
       = article.time_created_in_words
 
-    = render("users/ratings/form", rating: rating, article: article) if user_signed_in?
+    = render("users/articles/rating", rating: rating, article: article) if user_signed_in?
     = render("comments/discussion", comments: comments, comment: comment)

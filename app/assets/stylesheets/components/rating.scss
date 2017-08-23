@@ -1,12 +1,15 @@
 .stars {
-  // width: 670px;
-  // display: inline-block;
+  font-size: 18px;
 }
 
-input[name="rating[score]"] { display: none; }
-
-label.collection_radio_buttons {  font-size: 18px;
+.star-item:before {
+  content: "\f005";
 }
+
+// input[name="rating[score]"] { display: none; }
+
+// label.collection_radio_buttons {  font-size: 18px;
+// }
 
 span input[name="rating[score]"]:checked ~ label.collection_radio_buttons:before {
   content: "\f005";
