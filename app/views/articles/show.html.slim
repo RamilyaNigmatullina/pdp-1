@@ -14,12 +14,5 @@
     .article__created_at.clearfix
       = article.time_created_in_words
 
-
-    .stars.js-star-rating
-      = simple_form_for([:users, rating], html: { class: "rating" }) do |f|
-        / - for i in 1..5 do
-        /   = radio_button_tag :rating, i, false, class: "star"
-
-        = f.collection_radio_buttons :score, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]], :first, :last
-
+    = render("users/ratings/form", rating: rating, article: article) if user_signed_in?
     = render("comments/discussion", comments: comments, comment: comment)

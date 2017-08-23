@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   namespace :users do
     resources :articles, only: %i(new create edit update destroy) do
       resources :comments, only: %i(create)
+      resources :ratings, only: %i(create)
     end
-    resources :ratings
   end
 
   root to: "articles#index"

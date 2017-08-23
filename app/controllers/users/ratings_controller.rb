@@ -1,14 +1,15 @@
 module Users
   class RatingsController < Users::BaseController
-    # before_action :authorize_user!
-    # before_action :authorize_user!, only: %i(edit update)
-
-    # expose(:article)
+    expose(:article)
+    expose(:rating)
 
     def new
     end
 
     def create
+      rating.user = current_user
+      rating.article = article
+      rating.save
     end
 
     def edit
@@ -19,12 +20,8 @@ module Users
 
     private
 
-    def authorize_user!
-      # authorize(article, :manage?)
-    end
-
     def rating_params
-      params.require(:rating).permit(:value)
+      params.require(:rating).permit(:score)
     end
   end
 end
