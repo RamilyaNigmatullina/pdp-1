@@ -1,35 +1,18 @@
-.stars {
+$star-item-color: #F5ED00;
+
+.star-rating {
   font-size: 18px;
+  display: block;
+  float: left;
 }
 
-.star-item:before {
-  content: "\f005";
+a.star-rating-item {
+  padding-right: 3px;
+  color: $star-item-color;
 }
 
-// input[name="rating[score]"] { display: none; }
-
-// label.collection_radio_buttons {  font-size: 18px;
-// }
-
-span input[name="rating[score]"]:checked ~ label.collection_radio_buttons:before {
-  content: "\f005";
-  color: #FE7;
-}
-
-input#rating_score_5:checked ~ label.collection_radio_buttons:before {
-}
-
-label.collection_radio_buttons:hover {
-  content: "\f005";
-  color: #FE7;
-}
-
-label.collection_radio_buttons:hover:before {
-  content: "\f005";
-  color: #FE7;
-}
-
-label.collection_radio_buttons:before {
-  content: "\f006";
-  font-family: FontAwesome;
+.article-rating {
+  display: block;
+  font-style: italic;
+  color: $dark-gray;
 }
