@@ -7,7 +7,7 @@ module Users
 
     def create
       rating.update(rating_params)
-      article.update_column(:average_rating, article.ratings.average(:score).round(1))
+      article.update(average_rating: article.ratings.average(:score).round(1))
       respond_with article, serializer: ::ArticleSerializer
     end
 
