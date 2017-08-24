@@ -10,9 +10,9 @@ class ArticleRating extends Components.Base
   initialize: ->
     @articleId = @$el.data("id")
     @currentUserRating = @props.data
+    @_showCurrentUserRating()
 
   bindings: ->
-    # windiw.onload @_showCurrentUserRating
     @$refs.starRatingItem.click @_updateArticleRating
     @$refs.starRatingItem.hover @_animateRating
     @$refs.starRatingItem.mouseout @_showCurrentUserRating

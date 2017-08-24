@@ -3,7 +3,7 @@ javascript:
 
 .star-rating
   - 5.times do |index|
-    = link_to "", "#", class: "js-star-rating-item fa fa-star-o", data: { rating: index + 1 }
+    = link_to "", "#", class: "js-star-rating-item fa", data: { rating: index + 1 }
 
 .article-rating
   = "#{article.ratings_count} votes recorded (#{article.average_rating} rating)"
