@@ -1,18 +1,18 @@
-$star-item-color: #F5ED00;
+$star-item-color: #f5ed00;
 
 .star-rating {
-  font-size: 18px;
   display: block;
   float: left;
-}
+  font-size: 18px;
 
-a.star-rating-item {
-  padding-right: 3px;
-  color: $star-item-color;
+  a {
+    padding-right: 3px;
+    color: $star-item-color;
+  }
 }
 
 .article-rating {
   display: block;
-  font-style: italic;
   color: $dark-gray;
+  font-style: italic;
 }
