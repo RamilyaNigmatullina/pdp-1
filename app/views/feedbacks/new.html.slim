@@ -1,20 +1,20 @@
 ruby:
-  title("Contact us")
+  title(t(".title"))
   description("Contact the team")
   keywords("Contact, Email, Touch, Getting in touch")
   meta robots: "noindex"
 
 .row
   .columns
-    hs Feedback
+    h3
+      = t(:feedback, scope: "activemodel.models")
 
 .row
   .medium-6.columns
     = simple_form_for(feedback, url: feedback_path) do |f|
 
       legend
-        ' Have a question?
-        | You may find the answer in the #{link_to("FAQ", "#")}.
+        = t(".any_questions")
 
       .form-inputs
         = f.input :name

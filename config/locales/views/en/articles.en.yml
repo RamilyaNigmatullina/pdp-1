@@ -1,0 +1,17 @@
+en:
+  users:
+    articles:
+      new:
+        title: "Create article"
+        create: "Create"
+      edit:
+        title: "Edit article"
+        update: "Update"
+  articles:
+    index:
+      title: "Articles"
+    show:
+      title: "Article %{article}"
+      edit: "Edit"
+      destroy: "Destroy"
+      confirm: "Are you sure?"

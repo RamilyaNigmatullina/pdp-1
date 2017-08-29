@@ -1,0 +1,17 @@
+ru:
+  users:
+    articles:
+      new:
+        title: "Создать статью"
+        create: "Создать"
+      edit:
+        title: "Редактировать статью"
+        update: "Обновить"
+  articles:
+    index:
+      title: "Статьи"
+    show:
+      title: "Статья %{article}"
+      edit: "Редактировать"
+      destroy: "Удалить"
+      confirm: "Вы уверены, что хотите удалить статью?"

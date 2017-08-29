@@ -11,7 +11,7 @@ feature "Create Article" do
 
   scenario "User creates article" do
     fill_form(:article, article_attributes)
-    click_button "Create Article"
+    click_button "Create"
 
     expect(page).to have_content("Article was successfully created.")
     expect(page).to have_content("Title")

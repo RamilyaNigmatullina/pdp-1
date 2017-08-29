@@ -14,7 +14,7 @@ feature "Update  Article" do
     visit edit_users_article_path(article1)
 
     fill_form(:article, article_attributes)
-    click_button "Update Article"
+    click_button "Update"
 
     expect(page).to have_content("Article was successfully updated.")
     expect(page).to have_content("New title")
