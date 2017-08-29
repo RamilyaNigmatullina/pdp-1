@@ -4,13 +4,13 @@ ru:
       title: "Ramilya's PDP-1"
       home: "Главная страница"
       new_article: "Новая статья"
-      ru: "Русский"
-      en: "English"
     navigation_user:
       edit_profile: "Редактировать профиль"
       sign_out: "Выход"
       sign_in: "Вход"
       sign_up: "Регистрация"
+      ru: "Русский"
+      en: "English"
     footer:
       title: "Ramilya's PDP-1"
       about_us: "О нас"
