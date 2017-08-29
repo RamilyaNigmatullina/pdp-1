@@ -9,6 +9,7 @@
 #= require foundation
 #= require current_user
 #= require fragments
+#= require components/all
 #= require_tree ../templates
 #= require_tree .
 

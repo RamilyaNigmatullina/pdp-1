@@ -8,6 +8,7 @@ gem "rails", "5.0.2"
 # assets
 gem "autoprefixer-rails"
 gem "coffee-rails"
+gem "font-awesome-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "fragments.js", git: "git@github.com:fs/fragments.js.git"
@@ -29,6 +30,7 @@ gem "simple_form"
 gem "slim"
 
 # all other gems
+gem "active_model_serializers", "0.10.0.rc4"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"

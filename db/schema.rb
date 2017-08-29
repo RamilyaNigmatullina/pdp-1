@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170812153348) do
+ActiveRecord::Schema.define(version: 20170823083553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.text     "text",       null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",                          null: false
+    t.text     "text",                           null: false
+    t.integer  "user_id",                        null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.decimal  "average_rating", default: "0.0", null: false
+    t.integer  "ratings_count",  default: 0,     null: false
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end
 
@@ -32,6 +34,16 @@ ActiveRecord::Schema.define(version: 20170812153348) do
     t.integer  "user_id"
     t.index ["article_id"], name: "index_comments_on_article_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "article_id"
+    t.integer  "score",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_ratings_on_article_id", using: :btree
+    t.index ["user_id"], name: "index_ratings_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,4 +71,6 @@ ActiveRecord::Schema.define(version: 20170812153348) do
   add_foreign_key "articles", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
+  add_foreign_key "ratings", "articles"
+  add_foreign_key "ratings", "users"
 end
