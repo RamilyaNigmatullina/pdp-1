@@ -5,6 +5,7 @@ module Users
     expose(:comment, parent: :article)
 
     def create
+      comment.user = current_user
       self.comment = new_comment if comment.save
       render "articles/fragments"
     end

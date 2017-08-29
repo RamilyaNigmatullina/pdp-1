@@ -1,13 +1,22 @@
 require "rails_helper"
 
+include ActiveJob::TestHelper
+
 feature "Create Feedback" do
   let(:feedback_attributes) { attributes_for(:feedback) }
+
+  before do
+    ActiveJob::Base.queue_adapter = :test
+  end
 
   scenario "Visitor creates feedback" do
     visit new_feedback_path
 
     fill_form :feedback, feedback_attributes
-    click_button "Submit"
+
+    perform_enqueued_jobs do
+      click_button "Submit"
+    end
 
     open_email(ENV.fetch("FEEDBACK_EMAIL"))
 
