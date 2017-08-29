@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
 
   resources :articles, only: %i(index show)
+  resource :feedback, only: %i(new create)
 
   namespace :users do
     resources :articles, only: %i(new create edit update destroy) do
