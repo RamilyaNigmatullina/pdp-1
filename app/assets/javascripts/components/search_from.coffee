@@ -1,6 +1,7 @@
 class SearchForm extends Components.Base
   refs:
     searchForm: "#q_title_or_text_cont"
+    articles: ".js-articles"
 
   config:
     searchUrl: "/articles?utf8=✓&q%5Btitle_or_text_cont%5D=:text&commit=Search"
@@ -14,7 +15,7 @@ class SearchForm extends Components.Base
       type: "GET"
       dataType: "json"
       success: (response) =>
-        console.log "3"
+        @$refs.articles.html(JST["templates/components/article"]({ articles: response });)
 
 $ ->
   new SearchForm($el) for $el in $(".js-articles-search-form")

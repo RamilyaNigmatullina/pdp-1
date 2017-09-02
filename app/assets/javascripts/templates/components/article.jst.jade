@@ -1,0 +1,13 @@
+- if (articles.length)
+  - articles.forEach(function(article){
+    .article-item
+      h3
+        a(href="/articles/"+article.id)=article.title
+      p
+        =article.short_text
+      .article__author
+        =article.author_full_name
+      .article__created_at
+        =article.time_created_in_words
+      hr
+  - })
