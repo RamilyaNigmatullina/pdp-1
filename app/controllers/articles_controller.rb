@@ -9,8 +9,16 @@ class ArticlesController < ApplicationController
   helper_method :current_user_rating
 
   def index
-    @q = Article.includes(:user).ransack(params[:q])
-    self.articles = @q.result(distinct: true).order(created_at: :desc).page(params[:page]).per(10)
+    @q = Article.ransack(params[:q])
+    self.articles = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(10)
+    respond_to do |format|
+      format.html {
+        render :index
+      }
+      format.json {
+        render json: articles
+      }
+    end
   end
 
   def show
