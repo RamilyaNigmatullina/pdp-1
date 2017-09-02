@@ -15,7 +15,7 @@ class SearchForm extends Components.Base
       type: "GET"
       dataType: "json"
       success: (response) =>
-        @$refs.articles.html(JST["templates/components/article"]({ articles: response });)
+        @$refs.articles.html(JST["templates/components/articles"]({ articles: response });)
 
 $ ->
   new SearchForm($el) for $el in $(".js-articles-search-form")

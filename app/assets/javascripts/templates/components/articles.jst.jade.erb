@@ -1,5 +1,5 @@
-- if (articles.length)
-  - articles.forEach(function(article){
+if (articles.length)
+  for article in articles
     .article-item
       h3
         a(href="/articles/"+article.id)=article.title
@@ -10,4 +10,3 @@
       .article__created_at
         =article.time_created_in_words
       hr
-  - })
