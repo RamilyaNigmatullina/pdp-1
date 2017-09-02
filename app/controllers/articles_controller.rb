@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  expose_decorated :articles
+  expose_decorated :articles, -> { paginated_articles }
   expose_decorated :article
 
   expose_decorated(:comments) { article.comments }
@@ -10,21 +10,16 @@ class ArticlesController < ApplicationController
 
   def index
     @q = Article.ransack(params[:q])
-    self.articles = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(10)
-    respond_to do |format|
-      format.html {
-        render :index
-      }
-      format.json {
-        render json: articles
-      }
-    end
   end
 
   def show
   end
 
   private
+
+  def paginated_articles
+    Article.includes(:user).order(created_at: :desc).page(params[:page]).per(10)
+  end
 
   def current_user_rating
     @rating ||= article.ratings.find_by(user: current_user)
