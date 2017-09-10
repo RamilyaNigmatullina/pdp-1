@@ -8,6 +8,7 @@
 #= require jquery-ujs
 #= require foundation
 #= require current_user
+#= require nested_form_fields
 #= require fragments
 #= require components/all
 #= require_tree ../templates

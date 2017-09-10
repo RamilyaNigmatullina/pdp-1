@@ -13,5 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders, only: %i(show new create)
+  resources :products, only: %i(index new create)
+  resources :warehouses, only: %i(index show new create)
+
+  get "/warehouse/:warehouse_id/products", to: "warehouse/products#index"
+
   root to: "articles#index"
 end

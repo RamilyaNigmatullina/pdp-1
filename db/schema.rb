@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823083553) do
+ActiveRecord::Schema.define(version: 20170910195951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,22 @@ ActiveRecord::Schema.define(version: 20170823083553) do
     t.integer  "user_id"
     t.index ["article_id"], name: "index_comments_on_article_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "warehouse_id"
+    t.integer  "amount"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["product_id"], name: "index_orders_on_product_id", using: :btree
+    t.index ["warehouse_id"], name: "index_orders_on_warehouse_id", using: :btree
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -68,9 +84,29 @@ ActiveRecord::Schema.define(version: 20170823083553) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "warehouse_products", force: :cascade do |t|
+    t.integer  "warehouse_id"
+    t.integer  "product_id"
+    t.integer  "amount"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["product_id"], name: "index_warehouse_products_on_product_id", using: :btree
+    t.index ["warehouse_id"], name: "index_warehouse_products_on_warehouse_id", using: :btree
+  end
+
+  create_table "warehouses", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "articles", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
+  add_foreign_key "orders", "products"
+  add_foreign_key "orders", "warehouses"
   add_foreign_key "ratings", "articles"
   add_foreign_key "ratings", "users"
+  add_foreign_key "warehouse_products", "products"
+  add_foreign_key "warehouse_products", "warehouses"
 end

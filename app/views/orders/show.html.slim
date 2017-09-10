@@ -1,0 +1,17 @@
+.row
+  .medium-6.columns
+    h3
+      ' Order #
+      = order.id
+
+    h5
+      ' Warehouse:
+      = order.warehouse.title
+
+    h5
+      ' Product:
+      = order.product.title
+
+    h5
+      ' Amount:
+      = order.amount

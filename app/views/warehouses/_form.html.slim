@@ -1,0 +1,14 @@
+= simple_form_for(warehouse) do |f|
+  .form-inputs
+    = f.input :title
+
+    = f.nested_fields_for :warehouse_products do |ff|
+      = ff.input :product_id, collection: products_data
+      = ff.input :amount
+
+      = ff.remove_nested_fields_link("Remove")
+
+    = f.add_nested_fields_link :warehouse_products
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,8 @@
+= simple_form_for(order) do |f|
+  .form-inputs
+    = f.input :warehouse_id, collection: warehouses_data
+    = f.input :product_id, collection: []
+    = f.input :amount
+
+  .form-actions
+    = f.button :submit
