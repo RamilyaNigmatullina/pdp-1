@@ -1,4 +1,5 @@
 = simple_form_for(order) do |f|
+  = render "base/form_errors", resource: order if order.errors.any?
   .form-inputs
     = f.input :warehouse_id, collection: warehouses_data
     = f.input :product_id, collection: []
