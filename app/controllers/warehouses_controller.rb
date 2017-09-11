@@ -4,9 +4,11 @@ class WarehousesController < ApplicationController
 
   helper_method :products_data
 
-  def index; end
+  def index
+  end
 
-  def new; end
+  def new
+  end
 
   def create
     warehouse.warehouse_products.each { |wp| wp.warehouse = warehouse }

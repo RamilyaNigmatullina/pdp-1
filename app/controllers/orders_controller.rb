@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
 
   helper_method :warehouses_data
 
-  def new; end
+  def new
+  end
 
   def create
     result = Orders::Save.call(order: order).order

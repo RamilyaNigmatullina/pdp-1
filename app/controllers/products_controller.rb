@@ -2,9 +2,11 @@ class ProductsController < ApplicationController
   expose(:products) { Product.all }
   expose(:product)
 
-  def index; end
+  def index
+  end
 
-  def new; end
+  def new
+  end
 
   def create
     product.save
