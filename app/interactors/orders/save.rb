@@ -16,8 +16,7 @@ module Orders
     end
 
     def reduce_amount_in_warehouse
-      warehouse_product = WarehouseProduct.find_by(product: order.product, warehouse: order.warehouse)
-      warehouse_product.update(amount: order.amount)
+      order.warehouse.remove(order.product, order.amount)
     end
   end
 end
