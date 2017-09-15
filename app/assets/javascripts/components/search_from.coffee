@@ -4,7 +4,7 @@ class SearchForm extends Components.Base
     articles: ".js-articles"
 
   config:
-    searchUrl: "/search_articles?utf8=✓&q%5Btitle_or_text_cont%5D=:text&commit=Search"
+    searchUrl: "/articles?utf8=✓&q%5Btitle_or_text_cont%5D=:text&commit=Search"
 
   bindings: ->
     @$refs.searchForm.on "input", @_showArticles
