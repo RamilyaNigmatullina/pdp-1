@@ -4,8 +4,18 @@ class SearchArticlesController < ApplicationController
   expose :articles
 
   def index
-    @q = Article.ransack(params[:q])
-    self.articles = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(10)
+    @search = ransack_params
+    self.articles = ransack_result
     render json: articles
+  end
+
+  private
+
+  def ransack_params
+    Article.includes(:user).ransack(params[:q])
+  end
+
+  def ransack_result
+    @search.result(distinct: true).order(created_at: :desc).page(params[:page]).per(10)
   end
 end
