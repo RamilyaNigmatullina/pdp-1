@@ -1,6 +1,6 @@
 class SearchForm extends Components.Base
   refs:
-    searchForm: "#q_title_or_text_cont"
+    searchForm: "#q_article_cont"
     articles: ".js-articles"
 
   config:

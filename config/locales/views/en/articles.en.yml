@@ -11,7 +11,7 @@ en:
     index:
       title: "Articles"
     search_form:
-      title_or_text_cont: "Search"
+      article_cont: "Search"
     show:
       title: "Article %{article}"
       edit: "Edit"

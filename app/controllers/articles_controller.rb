@@ -31,6 +31,8 @@ class ArticlesController < ApplicationController
   end
 
   def ransack_result
-    @q.result(distinct: true).order(created_at: :desc).page(params[:page]).per(10)
+    @q.result(distinct: true)
+      .order(created_at: :desc)
+      .page(params[:page]).per(10)
   end
 end

@@ -11,7 +11,7 @@ ru:
     index:
       title: "Статьи"
     search_form:
-      title_or_text_cont: "Поиск"
+      article_cont: "Поиск"
     show:
       title: "Статья %{article}"
       edit: "Редактировать"
