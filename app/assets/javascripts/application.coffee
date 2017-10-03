@@ -6,6 +6,7 @@
 #
 #= require jquery2
 #= require jquery-ujs
+#= require jquery-debounce
 #= require foundation
 #= require current_user
 #= require fragments

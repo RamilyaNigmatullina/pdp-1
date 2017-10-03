@@ -298,6 +298,8 @@ GEM
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
     rails-assets-jquery (3.1.1)
+    rails-assets-jquery-debounce (1.0.6)
+      rails-assets-jquery
     rails-assets-jquery-ujs (1.2.2)
       rails-assets-jquery (> 1.8)
     rails-assets-jquery2 (2.0.0)
@@ -507,6 +509,7 @@ DEPENDENCIES
   rack-canonical-host
   rack-mini-profiler!
   rails (= 5.0.2)
+  rails-assets-jquery-debounce!
   rails-assets-jquery-ujs!
   rails-assets-jquery2!
   rails-erd

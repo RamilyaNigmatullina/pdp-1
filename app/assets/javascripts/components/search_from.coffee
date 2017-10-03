@@ -1,19 +1,19 @@
 class SearchForm extends Components.Base
   refs:
-    searchForm: "#q_article_cont"
+    searchForm: "#search_form"
     articles: ".js-articles"
 
-  config:
-    searchUrl: "/articles?utf8=✓&q%5Btitle_or_text_cont%5D=:text&commit=Search"
-
   bindings: ->
-    @$refs.searchForm.on "input", @_showArticles
+    # @$refs.searchForm.on "input", @_showArticles
+    @$refs.searchForm.on "input", $.debounce(@_showArticles, 300)
 
   _showArticles: (event) =>
     $.ajax
-      url: @config.searchUrl.replace(":text", event.currentTarget.value)
-      type: "GET"
+      url: "/articles"
       dataType: "json"
+      data:
+        query:
+          article_cont: event.currentTarget.value
       success: (response) =>
         @$refs.articles.html(JST["templates/components/articles"]({ articles: response });)
 
