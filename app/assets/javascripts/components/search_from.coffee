@@ -4,7 +4,6 @@ class SearchForm extends Components.Base
     articles: ".js-articles"
 
   bindings: ->
-    # @$refs.searchForm.on "input", @_showArticles
     @$refs.searchForm.on "input", $.debounce(@_showArticles, 300)
 
   _showArticles: (event) =>
