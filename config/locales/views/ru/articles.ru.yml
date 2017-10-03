@@ -10,8 +10,6 @@ ru:
   articles:
     index:
       title: "Статьи"
-    search_form:
-      article_cont: "Поиск"
     show:
       title: "Статья %{article}"
       edit: "Редактировать"

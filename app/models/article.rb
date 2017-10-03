@@ -4,6 +4,4 @@ class Article < ApplicationRecord
   has_many :ratings
 
   validates :title, :text, presence: true
-
-  ransack_alias :article, :title_or_text
 end
