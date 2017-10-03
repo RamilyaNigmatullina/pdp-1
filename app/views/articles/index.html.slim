@@ -1,9 +1,7 @@
 - title(t(".title"))
 
 .row
-  .medium-8.columns.js-articles-search-form
+  .medium-8.columns
     h1 = t(".title")
-    = render("search_form")
-    .js-articles
-      = render(articles)
-      = paginate(articles)
+    = render(articles)
+    = paginate(articles)

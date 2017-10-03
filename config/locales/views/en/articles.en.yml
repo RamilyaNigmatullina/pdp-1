@@ -10,8 +10,6 @@ en:
   articles:
     index:
       title: "Articles"
-    search_form:
-      article_cont: "Search"
     show:
       title: "Article %{article}"
       edit: "Edit"

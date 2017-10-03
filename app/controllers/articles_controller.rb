@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  expose_decorated :articles
+  expose_decorated :articles, -> { paginated_articles }
   expose_decorated :article
 
   expose_decorated(:comments) { article.comments }
@@ -8,12 +8,7 @@ class ArticlesController < ApplicationController
 
   helper_method :current_user_rating
 
-  respond_to :html, :json
-
   def index
-    @q = ransack_params
-    self.articles = ransack_result
-    respond_with articles
   end
 
   def show
@@ -21,18 +16,12 @@ class ArticlesController < ApplicationController
 
   private
 
+  def paginated_articles
+    Article.includes(:user).order(created_at: :desc).page(params[:page]).per(10)
+  end
+
   def current_user_rating
     @rating ||= article.ratings.find_by(user: current_user)
     @rating ? @rating.score : 0
-  end
-
-  def ransack_params
-    Article.includes(:user).ransack(params[:q])
-  end
-
-  def ransack_result
-    @q.result(distinct: true)
-      .order(created_at: :desc)
-      .page(params[:page]).per(10)
   end
 end
