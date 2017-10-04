@@ -6,9 +6,11 @@
 #
 #= require jquery2
 #= require jquery-ujs
+#= require jquery-debounce
 #= require foundation
 #= require current_user
 #= require fragments
+#= require jade/runtime
 #= require components/all
 #= require_tree ../templates
 #= require_tree .

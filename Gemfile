@@ -18,6 +18,7 @@ gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
 
 source "https://rails-assets.org" do
+  gem "rails-assets-jquery-debounce"
   gem "rails-assets-jquery-ujs"
   gem "rails-assets-jquery2"
 end
@@ -25,6 +26,7 @@ end
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
+gem "jade-rails", "~> 1.11.0.1"
 gem "metamagic"
 gem "simple_form"
 gem "slim"
@@ -45,6 +47,7 @@ gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
 gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/rack-mini-profiler.git"
+gem "ransack"
 gem "responders"
 gem "rollbar"
 gem "seedbank"

@@ -6,7 +6,7 @@ class ArticleDecorator < ApplicationDecorator
   end
 
   def short_text
-    h.truncate(object.text)
+    h.truncate(object.text, length: 300)
   end
 
   def time_created_in_words
